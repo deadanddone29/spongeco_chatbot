@@ -1,0 +1,60 @@
+Tech Stack
+
+Backend:
+Flask: Python web framework for backend logic and routing.
+Pandas: For managing chatbot FAQ data.
+scikit-learn: For vectorization and similarity calculations.
+TextBlob: For sentiment analysis.
+
+Frontend:
+HTML/CSS: For static templates and styling.
+JavaScript (Fetch API): For dynamic interactions like adding to cart and chatbot responses.
+
+Program: SpongeCo Application
+├── app.py (Backend Logic)
+│   ├── Routes
+│   │   ├── / (index): Displays the homepage with products
+│   │   ├── /chat: Handles chat interactions with the bot
+│   │   ├── /cart: Displays the cart page with added items
+│   │   ├── /add_to_cart: API endpoint to add items to the cart
+│   │   ├── /remove_from_cart: API endpoint to remove items from the cart
+│   ├── Functions
+│   │   ├── chatbot_response(user_query): Generates a bot response based on user query
+│   │   ├── analyze_sentiment(user_query): Analyzes sentiment of the user query
+│   ├── Session Management
+│       ├── session['cart']: Stores cart items
+│
+├── Static Assets (Frontend Resources)
+│   ├── /static/images: Product images
+│   ├── /static/css: Optional custom CSS for styling
+│
+├── Templates (HTML Frontend)
+│   ├── index.html: Homepage with product listings
+│   │   ├── Products Section
+│   │   │   ├── Product Name
+│   │   │   ├── Product Image
+│   │   │   ├── Add to Cart Button
+│   │   ├── Top Navigation
+│   │       ├── Go to Cart Button
+│   │       ├── Chat with Customer Service Button
+│   ├── chat.html: Chat interface for interacting with the bot
+│   │   ├── Chat Header
+│   │   ├── Chat Box (Conversation Display)
+│   │   ├── Message Input
+│   │   ├── Send Button
+│   ├── cart.html: Cart page displaying selected items
+│       ├── List of Cart Items
+│       ├── Remove Button for each item
+│
+├── External Files
+│   ├── faq_data.csv: Data file for chatbot questions and responses
+│
+├── Dependencies
+│   ├── Flask: Web framework
+│   ├── Pandas: Data manipulation for FAQ data
+│   ├── sklearn: Vectorization and similarity metrics
+│   ├── TextBlob: Sentiment analysis
+│
+└── Execution
+    ├── `python app.py`: Runs the Flask server locally
+    ├── Debug Mode: Enabled for development
